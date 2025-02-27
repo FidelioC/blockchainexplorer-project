@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const getImage = (imageName) => require(`./pictures/${imageName}.png`);
 
@@ -6,21 +7,21 @@ function Navbar() {
   return (
     <nav className="navbar_home">
       <div className="navbar_home_left">
-        <a href="/" className="navbar_logo">
+        <Link to="/home" className="navbar_logo">
           <img
             src={getImage("navbar_logo")}
             alt="BlockChainExplorer Logo"
             className="navbar_logo_picture"
           />
-        </a>
+        </Link>
       </div>
       <div className="navbar_home_center">
         <ul className="navbar_home_center_links">
           <li>
-            <a href="/"> Explore </a>
+            <Link to="/explorer"> Explore </Link>
           </li>
           <li>
-            <a href="/"> test 2</a>
+            <Link to="/coinsinfo"> CoinsInfo</Link>
           </li>
         </ul>
       </div>
