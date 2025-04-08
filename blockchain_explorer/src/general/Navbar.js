@@ -1,32 +1,38 @@
-import "./Navbar.css";
+import React from "react";
 import { Link } from "react-router-dom";
-
-const getImage = (imageName) => require(`./pictures/${imageName}.png`);
+import { Compass, Coins, BarChart2 } from "lucide-react";
 
 function Navbar() {
   return (
-    <nav className="navbar_home">
-      <div className="navbar_home_left">
-        <Link to="/home" className="navbar_logo">
-          <img
-            src={getImage("navbar_logo")}
-            alt="BlockChainExplorer Logo"
-            className="navbar_logo_picture"
-          />
-        </Link>
-      </div>
-      <div className="navbar_home_center">
-        <ul className="navbar_home_center_links">
-          <li>
-            <Link to="/explorer"> Explore </Link>
-          </li>
-          <li>
-            <Link to="/coinsinfo"> CoinsInfo</Link>
-          </li>
-        </ul>
-      </div>
-      <div className="navbar_home_right">
-        <a href="/">test right</a>
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/home" className="flex items-center">
+              <BarChart2 className="h-8 w-8 text-indigo-600" />
+              <span className="ml-2 text-xl font-bold text-gray-900">
+                BlockchainExplorer
+              </span>
+            </Link>
+          </div>
+
+          <div className="flex items-center space-x-8">
+            <Link
+              to="/explorer"
+              className="flex items-center text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              <Compass className="h-5 w-5 mr-1.5" />
+              Explore
+            </Link>
+            <Link
+              to="/coinsinfo"
+              className="flex items-center text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              <Coins className="h-5 w-5 mr-1.5" />
+              CoinsInfo
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   );

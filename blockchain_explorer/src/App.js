@@ -3,6 +3,7 @@ import Navbar from "./general/Navbar";
 import Home from "./Home";
 import Explorer from "./Explorer";
 import CoinsInfo from "./CoinsInfo";
+import React from "react";
 
 function App() {
   return (
