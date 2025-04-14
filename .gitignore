@@ -12,7 +12,7 @@ UI/coverage
 UI/build
 
 # misc
-UI/.DS_Store
+DS_Store
 UI/.env.local
 UI/.env.development.local
 UI/.env.test.local
