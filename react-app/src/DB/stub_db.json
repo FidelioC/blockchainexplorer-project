@@ -1,0 +1,12 @@
+{
+  "bitcoin": {
+    "stats": {
+      "totalTransactions": "854.32M",
+      "blockchainHeight": "828,394",
+      "marketCap": "$841.23B",
+      "allTimeHigh": "$69,044.77",
+      "avgMinedBlock": "9.48 minutes",
+      "avgTransaction": "$42,371"
+    }
+  }
+}

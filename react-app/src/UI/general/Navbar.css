@@ -1,0 +1,31 @@
+.navbar_home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.navbar_logo_picture {
+  height: auto;
+  width: 7vw;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.navbar_home_center .navbar_home_center_links {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar_home_center .navbar_home_center_links li {
+  margin-right: 1rem;
+}
+
+.navbar_home_center .navbar_home_center_links a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar_home_center .navbar_home_center_links a:hover {
+  color: blue;
+}
