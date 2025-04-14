@@ -1,23 +1,23 @@
 # === Frontend: UI/ ===
 
 # dependencies
-client/node_modules
-client/.pnp
-client/.pnp.js
+UI/node_modules
+UI/.pnp
+UI/.pnp.js
 
 # testing
-client/coverage
+UI/coverage
 
 # production
-client/build
+UI/build
 
 # misc
-client/.DS_Store
-client/.env.local
-client/.env.development.local
-client/.env.test.local
-client/.env.production.local
+UI/.DS_Store
+UI/.env.local
+UI/.env.development.local
+UI/.env.test.local
+UI/.env.production.local
 
-client/npm-debug.log*
-client/yarn-debug.log*
-client/yarn-error.log*
+UI/npm-debug.log*
+UI/yarn-debug.log*
+UI/yarn-error.log*
