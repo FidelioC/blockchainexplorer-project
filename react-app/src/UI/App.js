@@ -7,7 +7,7 @@ import {
 
 import Navbar from "./general/Navbar";
 import Home from "./Home";
-import Explorer from "./Explorer";
+import Explorer from "./explorerPage/Explorer";
 import CoinsInfo from "./CoinsInfo";
 import React from "react";
 

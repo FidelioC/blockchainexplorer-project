@@ -9,7 +9,7 @@ function Navbar() {
         <div className="flex items-center h-16 space-x-8">
           {/* Logo and Title */}
           <Link to="/" className="flex items-center">
-            <BarChart2 className="h-8 w-8 text-indigo-400" />
+            <BarChart2 className="h-8 w-8 text-blue-400" />
             <span className="ml-2 text-xl font-bold text-gray-100">
               Blockchain Explorer
             </span>
@@ -18,14 +18,14 @@ function Navbar() {
           {/* Nav Links */}
           <Link
             to="/explorer"
-            className="flex items-center text-gray-300 hover:text-indigo-400 pl-2 py-2 rounded-md text-sm font-medium transition-colors"
+            className="flex items-center text-gray-300 hover:text-blue-400 pl-2 py-2 rounded-md text-sm font-medium transition-colors"
           >
             <Compass className="h-5 w-5 mr-1.5" />
             Explore
           </Link>
           <Link
             to="/coinsinfo"
-            className="flex items-center text-gray-300 hover:text-indigo-400 pl-2 py-2 rounded-md text-sm font-medium transition-colors"
+            className="flex items-center text-gray-300 hover:text-blue-400 pl-2 py-2 rounded-md text-sm font-medium transition-colors"
           >
             <Coins className="h-5 w-5 mr-1.5" />
             CoinsInfo
