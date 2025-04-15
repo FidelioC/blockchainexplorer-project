@@ -15,10 +15,10 @@ const coin = "bitcoin";
 
 function Explorer() {
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Explorer Page</h1>
-      <div className="grid grid-cols-1 gap-6">
-        <PriceGraph coin={coin} />
+    <div className="min-h-screen bg-gray-900 p-8">
+      <h1 className="text-3xl font-bold text-gray-100 mb-8">Explorer Page</h1>
+      <div className="max-w-6xl">
+        <CryptoChart coin={coin} />
         <CryptoStats stats={stubData[coin].stats} />
       </div>
     </div>
@@ -43,23 +43,23 @@ function CryptoStats({ stats }) {
     { icon: Coins, label: "Avg. Transaction", value: stats.avgTransaction },
   ];
   return (
-    <div className="bg-white shadow-lg rounded-xl border border-gray-200 mt-8">
+    <div className="bg-gray-800 shadow-xl rounded-xl border border-gray-700 mt-8">
       <div className="p-6">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+        <h2 className="text-2xl font-bold text-gray-100 mb-6">
           {coin} Statistics
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {statItems.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-4 rounded-lg shadow-sm flex items-start"
+              className="bg-gray-900/50 p-4 rounded-lg shadow-lg flex items-start border border-gray-700/50"
             >
-              <item.icon className="h-6 w-6 text-indigo-600 mr-3 mt-1" />
+              <item.icon className="h-6 w-6 text-emerald-400 mr-3 mt-1" />
               <div>
-                <h3 className="text-sm font-medium text-gray-500">
+                <h3 className="text-sm font-medium text-gray-400">
                   {item.label}
                 </h3>
-                <p className="mt-2 text-xl font-semibold text-gray-900">
+                <p className="mt-2 text-xl font-semibold text-gray-100">
                   {item.value}
                 </p>
               </div>
