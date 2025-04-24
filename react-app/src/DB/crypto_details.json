@@ -1,7 +1,11 @@
 {
   "bitcoin": {
     "display_name": "Bitcoin",
+    "symbol": "BTC",
+    "symbol_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png",
     "stats": {
+      "currentPrice": "$45,231.52",
+      "change": "-22.5%",
       "totalTransactions": "854.32M",
       "blockchainHeight": "828,394",
       "marketCap": "$841.23B",
@@ -176,7 +180,11 @@
   },
   "ethereum": {
     "display_name": "Ethereum",
+    "symbol": "ETH",
+    "symbol_image": "https://cdn.pixabay.com/photo/2021/05/24/09/15/ethereum-logo-6278329_1280.png",
     "stats": {
+      "currentPrice": "$2,831.24",
+      "change": "+3.2%",
       "totalTransactions": "854.32M",
       "blockchainHeight": "828,394",
       "marketCap": "$841.23B",

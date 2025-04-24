@@ -10,6 +10,7 @@ import Home from "./Home";
 import Explorer from "./explorerPage/Explorer";
 import CoinsInfo from "./CoinsInfo";
 import React from "react";
+import cryptoDetailsDB from "../DB/crypto_details.json";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Navbar />
         <Routes>
           {/* Redirect root path to /home */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home cryptoDetails={cryptoDetailsDB} />} />
           <Route path="/:coin" element={<Explorer />} />
           <Route path="/coinsinfo" element={<CoinsInfo />} />
         </Routes>

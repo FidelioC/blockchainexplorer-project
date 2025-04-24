@@ -2,31 +2,9 @@ import React, { useState } from "react";
 import { Search, TrendingUp, Star, ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-function Home() {
+function Home({ cryptoDetails = [] }) {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-
-  const featuredCoins = [
-    {
-      name: "bitcoin",
-      symbol: "BTC",
-      price: "45,231.52",
-      change: "+2.5%",
-      marketCap: "841.23B",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1024px-Bitcoin.svg.png",
-    },
-    {
-      name: "ethereum",
-      symbol: "ETH",
-      price: "2,831.24",
-      change: "+3.2%",
-      marketCap: "321.45B",
-      image:
-        "https://cdn.pixabay.com/photo/2021/05/24/09/15/ethereum-logo-6278329_1280.png",
-    },
-  ];
-
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -34,6 +12,11 @@ function Home() {
     }
   };
 
+  const featuredCoins = Object.entries(cryptoDetails).map(([key, value]) => ({
+    id: key,
+    ...value,
+  }));
+  console.log(featuredCoins);
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       {/* Hero Section with Search */}
@@ -65,23 +48,23 @@ function Home() {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredCoins.map((coin, index) => (
+          {featuredCoins.map((coin) => (
             <div
-              key={index}
+              key={coin.symbol}
               className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden hover:border-blue-500 transition-colors cursor-pointer"
-              onClick={() => navigate(`/${coin.name}`)}
+              onClick={() => navigate(`/${coin.id}`)}
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden bg-gray-900 flex items-center justify-center">
                 <img
-                  src={coin.image}
-                  alt={coin.name}
-                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                  src={coin.symbol_image}
+                  alt={coin.symbol}
+                  className="object-contain transition-transform duration-500 hover:scale-110"
                 />
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold flex items-center">
-                    {coin.name}
+                    {coin.display_name}
                     <span className="text-gray-400 text-sm ml-2">
                       {coin.symbol}
                     </span>
@@ -90,12 +73,22 @@ function Home() {
                 </div>
                 <div className="flex justify-between items-center">
                   <div>
-                    <p className="text-2xl font-bold">${coin.price}</p>
-                    <p className="text-emerald-400 text-sm">{coin.change}</p>
+                    <p className="text-2xl font-bold">
+                      {coin.stats.currentPrice}
+                    </p>
+                    <p
+                      className={`text-sm ${
+                        coin.stats.change.startsWith("-")
+                          ? "text-red-400"
+                          : "text-emerald-400"
+                      }`}
+                    >
+                      {coin.stats.change}
+                    </p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-gray-400">Market Cap</p>
-                    <p className="font-semibold">${coin.marketCap}</p>
+                    <p className="font-semibold">{coin.stats.marketCap}</p>
                   </div>
                 </div>
               </div>

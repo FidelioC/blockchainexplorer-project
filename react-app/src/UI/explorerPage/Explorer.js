@@ -3,12 +3,12 @@ import PriceGraph from "./PriceGraph";
 import BlockchainDetails from "./BlockchainDetails";
 import CryptoStats from "./CryptoStats";
 
-import crypto_details from "../../DB/crypto_details.json";
+import cryptoDetailsDB from "../../DB/crypto_details.json";
 import { useParams } from "react-router-dom";
 
 function Explorer() {
   const { coin } = useParams();
-  const cryptoDetails = crypto_details[coin];
+  const cryptoDetails = cryptoDetailsDB[coin];
   return (
     <div className="min-h-screen bg-gray-900 p-8">
       <h1 className="text-3xl font-bold text-gray-100 mb-8">Explorer Page</h1>
