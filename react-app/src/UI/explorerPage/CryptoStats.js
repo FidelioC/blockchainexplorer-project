@@ -6,8 +6,10 @@ import {
   BarChart2,
   ArrowUpCircle,
 } from "lucide-react";
+import tailwindClassToHex from "../utils/TextToHex";
 
-function CryptoStats({ coin, stats }) {
+function CryptoStats({ coin, stats, color = "emerald-400" }) {
+  const hexColor = tailwindClassToHex("text-" + color);
   const statItems = [
     {
       icon: TrendingUp,
@@ -36,7 +38,10 @@ function CryptoStats({ coin, stats }) {
               key={index}
               className="bg-gray-900/50 p-4 rounded-lg shadow-lg flex items-start border border-gray-700/50"
             >
-              <item.icon className="h-6 w-6 text-emerald-400 mr-3 mt-1" />
+              <item.icon
+                className="h-6 w-6 mr-3 mt-1"
+                style={{ color: hexColor }}
+              />
               <div>
                 <h3 className="text-sm font-medium text-gray-400">
                   {item.label}

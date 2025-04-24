@@ -1,5 +1,6 @@
 {
   "bitcoin": {
+    "display_name": "Bitcoin",
     "stats": {
       "totalTransactions": "854.32M",
       "blockchainHeight": "828,394",
@@ -7,6 +8,7 @@
       "allTimeHigh": "$69,044.77",
       "avgMinedBlock": "9.48 minutes",
       "avgTransaction": "$42,371"
-    }
+    },
+    "color": "yellow-600"
   }
 }
