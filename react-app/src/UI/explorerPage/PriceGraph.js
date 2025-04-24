@@ -9,23 +9,15 @@ import {
 } from "recharts";
 import tailwindClassToHex from "../utils/TextToHex";
 
-function PriceGraph({ coin = "Placeholder Coin", color = "emerald-400" }) {
+function PriceGraph({
+  coin = "Placeholder Coin",
+  color = "emerald-400",
+  price = [{ time: "0", price: 0 }],
+}) {
   // Placeholder data (time-series format)
-  const price = [
-    { time: "12:00", price: 0 },
-    { time: "12:05", price: 55 },
-    { time: "12:10", price: 53 },
-    { time: "12:15", price: 583 },
-    { time: "12:20", price: 54 },
-    { time: "12:25", price: 560 },
-    { time: "12:30", price: 52 },
-    { time: "12:35", price: 57 },
-    { time: "12:40", price: 59 },
-    { time: "12:45", price: 10 },
-  ];
-  const [data] = useState(price);
+  var [data] = useState(price);
 
-  const [hoveredPrice, setHoveredPrice] = useState(data[data.length - 1].price);
+  var [hoveredPrice, setHoveredPrice] = useState(data[data.length - 1].price);
   const hexColor = tailwindClassToHex("text-" + color);
 
   return (

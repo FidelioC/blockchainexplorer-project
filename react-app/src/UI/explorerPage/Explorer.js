@@ -8,7 +8,6 @@ import stubData from "../../DB/stub_db.json";
 const coin = "bitcoin";
 
 function Explorer() {
-  const varColor = stubData[coin].color;
   return (
     <div className="min-h-screen bg-gray-900 p-8">
       <h1 className="text-3xl font-bold text-gray-100 mb-8">Explorer Page</h1>
@@ -17,6 +16,7 @@ function Explorer() {
           <PriceGraph
             coin={stubData[coin].display_name}
             color={stubData[coin].color}
+            price={stubData[coin].price}
           />
           <CryptoStats
             coin={coin}
@@ -25,7 +25,11 @@ function Explorer() {
           />
         </div>
         <div>
-          <BlockchainDetails color={stubData[coin].color} />
+          <BlockchainDetails
+            color={stubData[coin].color}
+            blocks={stubData[coin].blocks}
+            transactions={stubData[coin].transactions}
+          />
         </div>
       </div>
     </div>
