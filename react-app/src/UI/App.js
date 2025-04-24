@@ -19,10 +19,8 @@ function App() {
         <Routes>
           {/* Redirect root path to /home */}
           <Route path="/" element={<Home />} />
-          <Route path="/explorer" element={<Explorer />} />
+          <Route path="/:coin" element={<Explorer />} />
           <Route path="/coinsinfo" element={<CoinsInfo />} />
-          {/* Catch all unknown routes and redirect to /home */}
-          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </Router>
     </div>

@@ -17,7 +17,7 @@ function Navbar() {
 
           {/* Nav Links */}
           <Link
-            to="/explorer"
+            to="/"
             className="flex items-center text-gray-300 hover:text-blue-400 pl-2 py-2 rounded-md text-sm font-medium transition-colors"
           >
             <Compass className="h-5 w-5 mr-1.5" />
