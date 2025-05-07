@@ -1,7 +1,7 @@
 {
   "name": "blockchain_explorer",
   "version": "1.0.0",
-  "homepage": "https://FidelioC.github.io/blockchainexplorer-project/react-app/build",
+  "homepage": "https://FidelioC.github.io/blockchainexplorer-project",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
