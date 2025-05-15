@@ -18,9 +18,14 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          {/* Redirect root path to /home */}
-          <Route path="/" element={<Home cryptoDetails={cryptoDetailsDB} />} />
-          <Route path="/:coin" element={<Explorer />} />
+          <Route
+            path="/blockchainexplorer-project"
+            element={<Home cryptoDetails={cryptoDetailsDB} />}
+          />
+          <Route
+            path="/:coin"
+            element={<Explorer cryptoDetails={cryptoDetailsDB} />}
+          />
           <Route path="/coinsinfo" element={<CoinsInfo />} />
         </Routes>
       </Router>

@@ -1,23 +1,23 @@
-# === Frontend: react-app/ ===
+# === Frontend:  ===
 
 # dependencies
-react-app/node_modules
-react-app/.pnp
-react-app/.pnp.js
+node_modules
+.pnp
+.pnp.js
 
 # testing
-react-app/coverage
+coverage
 
 # production
-react-app/breact-appld
+breact-appld
 
 # misc
 DS_Store
-react-app/.env.local
-react-app/.env.development.local
-react-app/.env.test.local
-react-app/.env.production.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-react-app/npm-debug.log*
-react-app/yarn-debug.log*
-react-app/yarn-error.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
